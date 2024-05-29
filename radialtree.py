@@ -33,6 +33,7 @@ def radialTreee(
     sample_classes=None,
     colorlabels=None,
     colorlabels_legend=None,
+    scaling_factor=1.0,
 ):
 
     """
@@ -208,7 +209,7 @@ def radialTreee(
         )
 
         j = 0
-        outerrad = R * 1.05 + width * len(colorlabels) + space * (len(colorlabels) - 1)
+        outerrad = R * 1.05 * scaling_factor + width * len(colorlabels) + space * (len(colorlabels) - 1)
 
         print(outerrad)
         # sort_index=np.argsort(Z2['icoord'])
